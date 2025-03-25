@@ -1,0 +1,25 @@
+
+@media (min-width: 768px) {
+    header h1 {
+        text-align: left;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav ul li{
+        flex: 1 1 100%;
+        padding: 5px;
+        
+    }
+
+    main h1 {
+        text-align: left;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+    }
+  
+}
