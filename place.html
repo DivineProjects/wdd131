@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Divie Jigu">
+    <meta name="description" content="Place site for country or place where I live, have visited, or wish to visit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+    <link rel="stylesheet" href="./styles/place.css">
+    <script defer src="./scripts/place.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Zimbabwe</h1>
+    </header>
+    <main>
+        <div class="card-container">
+        <section class="hero">
+            <picture>
+                <source srcset="images/rinho.webp" media="(min-width: 640px)">
+                <img src="images/vicfalls.webp" alt="victoria Falls, Zimbabwe" width="320" height="640" loading="lazy">
+              </picture>
+        </section>
+        <!-- Card Section -->
+        <!-- <div class="card-container"> -->
+            <section class="card" id="card-data">
+                <dvi class="card-title">
+                    <h2>Data</h2>
+                </dvi>
+                <div class="card-items">
+            
+                    <p><span class="data-label">Area:</span>386,850 sq km</p>
+                    <p><span class="data-label">Population:</span>16.34 million</p>
+                    <p><span class="data-label">Capital:</span>Harare</p>
+                    <p><span class="data-label">Languages:</span>Shona, Ndebele, English</p>
+                    <p><span class="data-label">Currency:</span>Zimbabwe Gold (Zig)</p>
+                    <p><span class="data-label">Time Zone:</span> GMT+2</p>
+                    <p><span class="data-label">Calling Code:</span>+263</p>
+                    <p><span class="data-label">Internet TLD:</span>.zw</p>
+                </div>
+            </section>
+            <section class="card" id="card-w">
+                <div class="card-title">
+                    <h2>Weather</h2>
+                    <img src="images/weather_day_sand_sandstorm_sun_icon.svg" alt="Weather" width="100" height="50" loading="lazy">
+                </div>
+
+                <div class="card-weather">
+                </div>
+                    
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 💖 Divine Jigu💖 </p>
+        <p>📍 Bulawayo, Zimbabwe</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>
