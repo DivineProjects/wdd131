@@ -91,9 +91,15 @@ section {
     text-align: right;
     font-weight: bold;
 }
-  
+.weather-icon-lg {
+    display: none; 
+}
+
+.weather-icon-sm img{
+    display: inline; 
+}
  
-  button {
+button {
     background-color: var(--accent-red); 
     padding: 10px 20px;
     border: none;
@@ -128,7 +134,7 @@ section {
 
 
   
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 640px) {
     
     .card {
         max-width: 250px;
@@ -189,6 +195,15 @@ section {
         width: 100%;
         right: 5%;
         padding: 0 0.5rem;
+    }
+
+    .weather-icon-lg {
+        display:inline;
+        font-size: 2rem;
+    }
+    
+    .weather-icon-sm img{
+        display: none;
     }
    
 
