@@ -18,7 +18,7 @@ body {
     place-items: center;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: Arial, sans-serif;  
+    font-family: 'Roboto', Arial, sans-serif;  
 }
 h1, h2, h3, h4 {
     color: var(--accent-yellow); 
@@ -136,7 +136,9 @@ button {
 
   
   @media screen and (min-width: 640px) {
-    
+    header h1::after{
+        content: " 🌍";
+    }
     .card {
         max-width: 250px;
         background: rgba(255, 255, 255, 0.7); 
@@ -169,6 +171,7 @@ button {
         left: 4%;
         z-index: 3; 
     }
+   
 
     #card-w {
         position: absolute; 
@@ -206,6 +209,7 @@ button {
     .weather-icon-sm img{
         display: none;
     }
+    
    
 
    
