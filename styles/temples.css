@@ -1,3 +1,11 @@
+:root {
+    /* Variables */
+    --primary-color: #003366;
+    --secondary-color: #FF6347;
+    --font-family-main: 'Roboto', sans-serif;
+    --textColor: whitesmoke;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,16 +14,15 @@
 
 body {
     place-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family-main);
     font-weight: 400;
     font-style: normal;
-    background-color: #003366;
-    color: #FFFFFF ;
+    background-color: var(--primary-color);
+    color:var(--textColor);
     min-height: 100dvh;
 }
  
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
     font-weight: 700;
 }
 
@@ -23,19 +30,19 @@ header {
     display: flex;
     width: 100%;
     flex-direction: column;
-    background: #003366;
+    /* background: #003366; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
 }
 
 header h1 {
     padding: 2rem;
-    color: #fff;
+    color: var(--textColor);
     text-align: center;
 }
 
 nav {
-    color: white;
+    color: var(--textColor);
     padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -60,7 +67,7 @@ nav {
 nav a {
     display: block;
 	grid-gap: 1rem;
-    color: whitesmoke;
+    color: var(--textColor);
     text-decoration: none;
     padding: 1rem;
     text-align: center;
@@ -72,7 +79,7 @@ nav a {
 nav a:hover {
     border-bottom: 2px  solid #FFFF00;
     transform: scale(1.1);
-    color: #0066CC;
+    color: var(--secondary-color);
 }
 
 /* small view navigation with humburgar menu*/
@@ -97,7 +104,7 @@ nav a:hover {
 
 
 .nav-link.active {
-	color: #FFFF00;
+	color: var(--secondary-color);
 }
 
 main {
