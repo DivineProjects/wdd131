@@ -131,6 +131,14 @@ main h2 {
     box-shadow: 0 0 20px #333;
 }
 
+figcaption {
+    font-style: italic;
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: small;
+}
+
 
 
 /* Footer Styles */
