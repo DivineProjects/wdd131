@@ -8,29 +8,33 @@ hamButton.addEventListener('click', () => {
 	hamButton.classList.toggle('open');
 });
 
-// // Select all navigation links
-// const navLinks = document.querySelectorAll('.navlink');
-// navLinks.forEach(link => {
-//     link.addEventListener('click', function() {
-//         // Remove the 'active' class from all links
-//         navLinks.forEach(link => link.classList.remove('active'));
+// Select all navigation links
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('.navlink');
 
-//         // Add the 'active' class to the clicked link
-//         this.classList.add('active');
-//     });
-// });
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+           
+            // Remove 'active' class from all links
+            navLinks.forEach(l => l.classList.remove('active'));
 
+            // Add 'active' class to the clicked link
+            this.classList.add('active');
+        });
+    });
 
-// Purpose: Get the current year and update the footer with it
-const domYearElement= document.querySelector("#currentyear");
-const today = new Date();
-const currentYear = today.getFullYear();
-domYearElement.textContent = currentYear;
+    // Purpose: Get the current year and update the footer
+    const domYearElement = document.querySelector("#currentyear");
+    if (domYearElement) {
+        domYearElement.textContent = new Date().getFullYear();
+    }
 
-// Get the last modified date and update footer with it
-const domLastModifiedElement= document.querySelector("#lastModified");
-domLastModifiedElement.textContent  = `Last Modified: ${today.toLocaleDateString()}`;
-
-
-
+    // Get the last modified date and update footer
+    const domLastModifiedElement = document.querySelector("#lastModified");
+    if (domLastModifiedElement) {
+        domLastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+    }
+});
 
