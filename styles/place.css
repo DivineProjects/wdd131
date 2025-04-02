@@ -16,7 +16,7 @@
 body {
     display: grid;
     place-items: center;
-    background-color: var(--text-color);
+    background-color: var(--background-color);
     color: var(--text-color);
     font-family: Arial, sans-serif;  
 }
