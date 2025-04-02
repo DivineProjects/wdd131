@@ -11,7 +11,7 @@ hamButton.addEventListener('click', () => {
 // Select all navigation links
 document.addEventListener("DOMContentLoaded", () => {
     // Select all navigation links
-    const navLinks = document.querySelectorAll('.navlink');
+    const navLinks = document.querySelectorAll('.nav-link');
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
