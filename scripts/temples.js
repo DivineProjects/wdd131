@@ -1,14 +1,24 @@
-// Select all navigation links
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        // Remove the 'active' class from all links
-        navLinks.forEach(link => link.classList.remove('active'));
+const hamButton = document.querySelector('#menu');
+console.log(hamButton);
+const navigation = document.querySelector('.nav-menu');
+console.log(navigation);
 
-        // Add the 'active' class to the clicked link
-        this.classList.add('active');
-    });
+hamButton.addEventListener('click', () => {
+	navigation.classList.toggle('open');
+	hamButton.classList.toggle('open');
 });
+
+// // Select all navigation links
+// const navLinks = document.querySelectorAll('.navlink');
+// navLinks.forEach(link => {
+//     link.addEventListener('click', function() {
+//         // Remove the 'active' class from all links
+//         navLinks.forEach(link => link.classList.remove('active'));
+
+//         // Add the 'active' class to the clicked link
+//         this.classList.add('active');
+//     });
+// });
 
 
 // Purpose: Get the current year and update the footer with it
