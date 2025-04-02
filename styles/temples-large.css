@@ -21,5 +21,19 @@
     .container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
     }
+
+    #menu {
+        display: none;
+        /* hide hamburger button */
+    }
+
+    .nav-menu {
+        flex-direction: row;
+    }
+
+    .nav-menu li {
+        display: block;
+        flex: 1 1 100%;
+    }
   
 }
