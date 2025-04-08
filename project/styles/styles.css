@@ -1,0 +1,133 @@
+/* Global Styles */
+:root {
+  --primary-color: #2D5B36; /* Darker forest green */
+    --secondary-color: #D8A52A; 
+    --accent-color: #F5F5DC; /* Light cream */ 
+    --link-color: #19198f; 
+
+}
+
+/* Body and General Layout */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--accent-color);  
+  color: var(--primary-color);  
+  margin: 0;
+  padding: 0;
+  
+  place-items: center;
+
+}
+
+header,
+main,
+footer {
+    width: 75%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);  
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+h2{
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+/* Main Content */
+main {
+  max-width: 1000px;
+  padding: 1rem;
+  width: 75%;
+
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.8em;
+  margin-top: 20px;
+}
+
+h4 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.5em;
+
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Links */
+a {
+  color: var(--link-color); 
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);  /* Dark forest green */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+/* Wireframe Images */
+section img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+/* Button Styles */
+button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  background-color: var(--link-color);  
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #C1973B; /* Slightly darker for hover effect */
+}
