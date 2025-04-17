@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice mindfulness in Zimbabwe's natural spaces">
+  <title>Go Wild | Mindful Safari</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&family=Roboto:wght@500&display=swap">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html">Go Wild</a></h1>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover Parks</a></li>
+          <li><a href="mindful.html" class="active">Mindful Safari</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Mindful Safari</h1>
+    
+    <section class="mindfulness-intro">
+      <h2>Connect With Nature</h2>
+      <p>Practicing mindfulness in nature can reduce stress, improve focus, and enhance your overall well-being. Zimbabwe's parks offer perfect settings for these practices.</p>
+      <img src="images/mana-pools.webp" alt="Person practicing mindfulness in nature" loading="lazy">
+    </section>
+
+    <section class="mindfulness-tips">
+      <h2>Mindfulness Techniques</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3>Forest Bathing</h3>
+          <p>Immerse yourself in the sights, sounds, and smells of the forest to reduce stress.</p>
+        </div>
+        <div class="tip-card">
+          <h3>Wildlife Observation</h3>
+          <p>Practice focused attention by quietly observing animals in their natural habitat.</p>
+        </div>
+        <div class="tip-card">
+          <h3>Nature Meditation</h3>
+          <p>Find a quiet spot to meditate, using natural sounds as your focus point.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mindfulness-tracker">
+      <h2>Track Your Mindfulness</h2>
+      <form id="mindfulness-form">
+        <div class="form-group">
+          <label for="minutes">Minutes Practiced:</label>
+          <input type="number" id="minutes" name="minutes" min="1" max="240" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="location">Location:</label>
+          <select id="location" name="location">
+            <option value="Home">Home</option>
+            <option value="Park">Park</option>
+            <option value="Garden">Garden</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="mood">Mood Before:</label>
+          <select id="mood-before" name="mood-before">
+            <option value="1">😞 Stressed</option>
+            <option value="2">😐 Neutral</option>
+            <option value="3">🙂 Calm</option>
+            <option value="4">😊 Happy</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="mood-after">Mood After:</label>
+          <select id="mood-after" name="mood-after">
+            <option value="1">😞 Stressed</option>
+            <option value="2">😐 Neutral</option>
+            <option value="3">🙂 Calm</option>
+            <option value="4">😊 Happy</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="notes">Notes:</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+        
+        <button type="submit">Save Session</button>
+      </form>
+      
+      <div id="mindfulness-stats" class="mindfulness-stats">
+        <h3>Your Mindfulness Journey</h3>
+        <!-- JavaScript will populate this -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Go Wild | <a href="references.html">References</a></p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook icon" loading="lazy"></a>
+        <a href="#" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram icon" loading="lazy"></a>
+        <a href="#" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter icon" loading="lazy"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

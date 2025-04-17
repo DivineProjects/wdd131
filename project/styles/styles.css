@@ -1,133 +1,287 @@
-/* Global Styles */
+/* Base Styles */
 :root {
-  --primary-color: #2D5B36; /* Darker forest green */
-    --secondary-color: #D8A52A; 
-    --accent-color: #F5F5DC; /* Light cream */ 
-    --link-color: #19198f; 
-
+  --primary: #4F6F52;
+  --secondary: #19198f;
+  --accent: #F5F5DC;
+  --text: #333333;
+  --light: #FFFFFF;
+  --shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Body and General Layout */
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: var(--accent-color);  
-  color: var(--primary-color);  
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
-  place-items: center;
-
 }
 
-header,
-main,
-footer {
-    width: 75%;
-	max-width: 1000px;
-	margin: 0 auto;
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--accent);
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  color: var(--primary);
 }
 
-/* Header */
+a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header Styles */
 header {
-  background-color: var(--primary-color);  
-  color: white;
-  padding: 20px;
-  text-align: center;
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-header h1 {
-  font-size: 2.5em;
-}
-h2{
-  text-align: center;
+header h1 a {
+  color: var(--light);
+  font-size: 1.8rem;
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
+  display: flex;
+  list-style: none;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 15px;
+nav a {
+  color: var(--light);
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background-color 0.3s;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
+nav a:hover, nav a.active {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 4px;
 }
 
-/* Main Content */
-main {
-  max-width: 1000px;
-  padding: 1rem;
-  width: 75%;
-
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--light);
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-h2 {
-  font-size: 2em;
+/* Hero Section */
+.hero {
+  position: relative;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
 }
 
-h3 {
-  font-size: 1.8em;
-  margin-top: 20px;
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-h4 {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.5em;
-
+.hero-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: var(--light);
+  padding: 2rem;
 }
 
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
+.hero-text h2 {
+  color: var(--light);
+  font-size: 2rem;
 }
 
-/* Links */
-a {
-  color: var(--link-color); 
-  text-decoration: none;
+/* Grid Layouts */
+.parks-grid, .benefits-grid, .tips-grid {
+  display: grid;
+  grid-gap: 1.5rem;
+  margin: 2rem 0;
 }
 
-a:hover {
-  text-decoration: underline;
+/* Cards */
+.park-card, .benefit-card, .tip-card {
+  background: var(--light);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.park-card:hover, .benefit-card:hover, .tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.park-card img, .benefit-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+/* Forms */
+form {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin: 2rem 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+button {
+  background-color: var(--secondary);
+  color: var(--light);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0f0f6f;
 }
 
 /* Footer */
 footer {
-  background-color: var(--primary-color);  /* Dark forest green */
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: var(--light);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--primary);
+    padding: 1rem;
+  }
+  
+  nav.active {
+    display: block;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+  
+  .parks-grid, .benefits-grid, .tips-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .parks-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .benefits-grid, .tips-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Accessibility Focus Styles */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+/* Skip to Content Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--secondary);
   color: white;
-  text-align: center;
-  padding: 10px;
-  font-size: 0.9em;
+  padding: 8px;
+  z-index: 100;
 }
 
-/* Wireframe Images */
-section img {
-  display: block;
-  margin: 0 auto;
-  padding-top: 10px;
+.skip-link:focus {
+  top: 0;
 }
 
-/* Button Styles */
-button {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  background-color: var(--link-color);  
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
+/* Lazy loading for images */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-button:hover {
-  background-color: #C1973B; /* Slightly darker for hover effect */
+img[loading="lazy"].loaded {
+  opacity: 1;
 }

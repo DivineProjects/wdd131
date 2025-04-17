@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Zimbabwe's wildlife parks and improve your well-being through nature">
+  <title>Go Wild | Home</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&family=Roboto:wght@500&display=swap">
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- <script defer src="scripts/main.js" ></script> -->
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html">Go Wild</a></h1>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="discover.html">Discover Parks</a></li>
+          <li><a href="mindful.html">Mindful Safari</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <picture>
+        <source media="(max-width: 960px)" srcset="images/hero-tablet.webp">
+        <source media="(max-width: 600px)" srcset="images/hero-mobile.webp">
+        <img src="images/hero-mobile.webp" alt="Sunset over African savanna" loading="lazy">
+      </picture>
+      <div class="hero-text">
+        <h2>Experience Zimbabwe's Wild Beauty</h2>
+        <p>Discover nature's healing power through wildlife tourism</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>Welcome to Go Wild</h2>
+      <p>Our mission is to connect you with Zimbabwe's magnificent game parks while promoting mental and physical wellness through nature immersion.</p>
+    </section>
+
+    <section id="featured-parks" class="featured-parks">
+      <h2>Featured Parks</h2>
+      <div class="parks-grid">
+        <!-- JavaScript will populate this -->
+      </div>
+    </section>
+
+    <section class="benefits">
+      <h2>Benefits of Nature</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <img src="images/stress-relief.webp" alt="Person meditating in nature" loading="lazy">
+          <h3>Stress Reduction</h3>
+          <p>Time in nature lowers cortisol levels by up to 21%</p>
+        </div>
+        <div class="benefit-card">
+          <img src="images/physical-health.webp" alt="People hiking" loading="lazy">
+          <h3>Physical Health</h3>
+          <p>Walking in parks improves cardiovascular health</p>
+        </div>
+        <div class="benefit-card">
+          <img src="images/mental-clarity.webp" alt="Sunrise over mountains" loading="lazy">
+          <h3>Mental Clarity</h3>
+          <p>Nature exposure enhances focus and creativity</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <h2>Stay Updated</h2>
+      <form id="newsletter-form">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Subscribe</button>
+        <p class="form-feedback"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Go Wild | <a href="references.html">References</a></p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook icon" loading="lazy"></a>
+        <a href="#" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram icon" loading="lazy"></a>
+        <a href="#" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter icon" loading="lazy"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
