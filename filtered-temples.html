@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temple gallery with filtering options">
+    <meta name="author" content="Divine Jigu">
+    <title>Temple Gallery with Filters | WDD 131</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/filtered-temples.css">
+    <link rel="stylesheet" href="./styles/temples-large.css">
+    <script defer src="./scripts/filtered-temples.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Gallery</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a class="navlink active" href="#" data-filter="all">Home</a></li>
+                <li><a class="navlink" href="#" data-filter="old">Old</a></li>
+                <li><a class="navlink" href="#" data-filter="new">New</a></li>
+                <li><a class="navlink" href="#" data-filter="large">Large</a></li>
+                <li><a class="navlink" href="#" data-filter="small">Small</a></li>
+            </ul>
+            <button aria-label="Hamburger Menu" id="menu"></button>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Temples</h2>
+        <div class="container" id="templeContainer">
+            <!-- Temple cards will be dynamically inserted here -->
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 📌 Divine Jigu 📍 Bulawayo, Zimbabwe</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

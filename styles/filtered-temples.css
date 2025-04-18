@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #003366;
+    --secondary-color: #FF6347;
+    --font-family-main: 'Roboto', sans-serif;
+    --textColor: whitesmoke;
+    --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-main);
+    background-color: var(--primary-color);
+    color: var(--textColor);
+    min-height: 100dvh;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    padding: 2rem;
+    text-align: center;
+}
+
+nav {
+    color: var(--textColor);
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu li {
+    display: none;
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+.open li {
+    display: block;
+    width: 100%;
+}
+
+.open li a {
+    display: block;
+}
+
+nav a {
+    display: block;
+    color: var(--textColor);
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #FFFF00;
+    transform: scale(1.1);
+    color: var(--secondary-color);
+}
+
+#menu {
+    font-size: 1rem;
+    padding: 3px 7px 6px;
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--textColor);
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "x";
+}
+
+.navlink.active {
+    color: var(--secondary-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main h2 {
+    padding: 1rem;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 1rem;
+}
+
+.temple-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.temple-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.temple-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.temple-info {
+    padding: 1rem;
+}
+
+.temple-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.temple-info p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1rem;
+    padding: 1rem;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+#currentyear {
+    font-weight: bold;
+    color: #2196F3;
+}
+
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .nav-menu li {
+        display: block;
+        width: auto;
+    }
+    
+    #menu {
+        display: none;
+    }
+}
