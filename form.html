@@ -7,6 +7,8 @@
     <meta name="description" content="Submit a review for our products">
     <meta name="author" content="Your Name">
     <link rel="stylesheet" href="styles/form.css">
+    <script defer src="./scripts/getdates.js" ></script>
+
 </head>
 <body>
     <header>
@@ -91,13 +93,10 @@
         </form>
     </main>
     <footer>
-        <p>&copy; <span id="currentYear"></span> | Your Name | Location</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
+        <p>&copy; <span id="currentyear"></span> 📌 Divine Jigu 📍 Bulawayo, Zimbabwe</p>
+        <p id="lastModified"></p>
     </footer>
     <script src="scripts/form.js"></script>
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        document.getElementById('lastModified').textContent = document.lastModified;
-    </script>
+    
 </body>
 </html>
