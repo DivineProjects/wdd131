@@ -5,6 +5,7 @@ const today = new Date();
 const currentYear = today.getFullYear();
 domYearElement.textContent = currentYear;
 
+
 // Get the last modified date and update footer with it
 const domLastModifiedElement= document.querySelector("#lastModified");
 domLastModifiedElement.textContent  = `Last Modified: ${today.toLocaleDateString()}`;
