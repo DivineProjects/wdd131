@@ -49,7 +49,7 @@ header h1 {
 }
 
 header h1 span {
-  display: block; /* requirement: span is block to center text/logo */
+  display: block; /* requirement */
 }
 
 /* =========================
@@ -100,7 +100,7 @@ nav a:hover {
   list-style: none;
   position: fixed;
   top: 0;
-  right: -250px; /* Hidden by default */
+  right: -250px; /* hidden by default */
   height: 100%;
   width: 60%;
   flex-direction: column;
@@ -134,7 +134,7 @@ main h1 {
   text-align: center;
   font-size: 2.5rem;
   margin: 2rem 0;
-  color: #19198f; /* secondary color */
+  color: #19198f;
 }
 
 /* =========================
@@ -168,6 +168,11 @@ main h1 {
   text-align: justify;
 }
 
+.card-items,
+.card-items-opposite {
+  display: block; /* default mobile */
+}
+
 /* =========================
    Footer
 ========================= */
@@ -187,11 +192,11 @@ footer p {
   margin: 5px 0;
 }
 
-footer p#last {
+footer p#lastModified {
   font-style: italic;
 }
 
-footer p#currentyear {
+footer span#currentyear {
   font-weight: bold;
   color: #2196F3;
 }
@@ -211,7 +216,7 @@ footer p#currentyear {
   }
 
   .hamburger {
-    display: none; /* Hide hamburger on desktop */
+    display: none; /* hide hamburger on desktop */
   }
 
   .nav-menu {
