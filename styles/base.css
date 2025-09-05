@@ -58,7 +58,7 @@ main {
 
 .card {
     display: block;
-    margin-bottom: 1rem;
+    margin: 1rem 0.3rem;
     border: 1px solid #212121;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
@@ -77,8 +77,8 @@ main {
 }
 
 .card p {
-    margin: 1rem 0;
-    padding: 0.3rem;
+    margin: 0.1rem 0;
+    padding: 0.1rem;
 }
 
 /* Footer Styles */
@@ -134,7 +134,14 @@ footer p#currentyear {
         padding: 0.5rem;
         gap: 0.5rem;
     }
-    
+    .card-items-opposite {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+        direction: ltr;
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
     .card img {
         width: 100%;
         grid-column: 1 / 2;
