@@ -13,6 +13,11 @@ domLastModifiedElement.textContent  = `Last Modified: ${today.toLocaleDateString
 
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.querySelector(".nav-menu");
+const closeNav = document.querySelector(".close-nav");
+
+closeNav.addEventListener("click", () => {
+  navMenu.classList.remove("active");
+});
 
 hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
