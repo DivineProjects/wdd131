@@ -79,6 +79,7 @@ main {
 .card p {
     margin: 0.1rem 0;
     padding: 0.1rem;
+    text-align: justify;
 }
 
 /* Footer Styles */
