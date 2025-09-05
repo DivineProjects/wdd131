@@ -33,10 +33,6 @@ nav {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.nav-menu {
-    list-style: none;
-}
-
 nav a {
     display: block;
     color: white;
@@ -49,6 +45,50 @@ nav a:hover {
     border-bottom: 2px  solid rgb(250, 250, 0);
     transform: scale(1.1);
 }
+
+/* Hamburger button */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Mobile nav menu (drawer) */
+.nav-menu {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  right: -250px; /* Hidden off-screen by default */
+  height: 100%;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: grey;
+  /* background: #003366; */
+  padding: 2rem 1rem;
+  gap: 1rem;
+  transition: right 0.3s ease-in-out;
+  margin: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Active menu (when toggled) */
+.nav-menu.active {
+  right: 0;
+}
+
 
 main {
     display: grid;
@@ -118,6 +158,21 @@ footer p#currentyear {
 
     nav ul li{
         flex: 1 1 100%;
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger */
+    }
+
+    .nav-menu {
+        position: static;
+        flex-direction: row;
+        justify-content: flex-end;
+        background: none;
+        height: auto;
+        width: auto;
+        padding: 0;
+        gap: 1rem;
     }
 
     main {
