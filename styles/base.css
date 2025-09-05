@@ -1,52 +1,82 @@
-/* Import Google Fonts */
+/* =========================
+   Google Fonts
+========================= */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
+/* =========================
+   Reset
+========================= */
 * {
-	margin: 0;
-	padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* =========================
+   Base Styles
+========================= */
 body {
-    display: grid;
-    place-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #F5F5F5;
-    color: #212121 ;
-    min-height: 100dvh;
-}
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+  display: grid;
+  place-items: center;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #F5F5F5;
+  color: #212121;
+  min-height: 100dvh;
+  line-height: 1.6;
 }
 
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   Header
+========================= */
 header {
-    width: 100%;
-    background: rgb(33, 33, 33);
+  width: 100%;
+  background: #212121;
 }
 
 header h1 {
-    padding: 1rem;
-    color: #fff;
-    text-align: center;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
 }
 
+header h1 span {
+  display: block; /* requirement: span is block to center text/logo */
+}
+
+/* =========================
+   Navigation
+========================= */
 nav {
-    color: white;
-    padding: 0.2rem;
-    background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  list-style: none;
 }
 
 nav a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 0.75rem;
-    text-align: center;
+  display: block;
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-    border-bottom: 2px  solid rgb(250, 250, 0);
-    transform: scale(1.1);
+  border-bottom: 2px solid #ffeb3b;
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
 }
 
 /* Hamburger button */
@@ -55,6 +85,7 @@ nav a:hover {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  padding: 0.5rem;
 }
 
 .hamburger span {
@@ -64,26 +95,23 @@ nav a:hover {
   border-radius: 2px;
 }
 
-/* Mobile nav menu (drawer) */
+/* Mobile nav menu (off-canvas) */
 .nav-menu {
   list-style: none;
   position: fixed;
   top: 0;
-  right: -250px; /* Hidden off-screen by default */
+  right: -250px; /* Hidden by default */
   height: 100%;
-  width: 50%;
+  width: 60%;
   flex-direction: column;
   align-items: flex-start;
-  background-color: grey;
-  /* background: #003366; */
+  background-color: #333;
   padding: 2rem 1rem;
   gap: 1rem;
   transition: right 0.3s ease-in-out;
-  margin: 0;
 }
 
 .nav-menu li a {
-  text-decoration: none;
   font-weight: bold;
 }
 
@@ -92,131 +120,143 @@ nav a:hover {
   right: 0;
 }
 
-
+/* =========================
+   Main Content
+========================= */
 main {
-    display: grid;
-    max-width: 1000px;
-    padding: 1rem;
+  display: grid;
+  max-width: 1000px;
+  padding: 1rem;
+  margin: 1rem auto;
 }
 
+main h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  color: #19198f; /* secondary color */
+}
+
+/* =========================
+   Cards
+========================= */
 .card {
-    display: block;
-    margin: 1rem 0.3rem;
-    border: 1px solid #212121;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-    color: #212121;
+  display: block;
+  margin: 1rem 0.3rem;
+  border: 1px solid #212121;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #212121;
+  overflow: hidden;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .card h2 {
-    padding: 0.3rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #003366;
+  padding: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #003366;
 }
 
 .card p {
-    margin: 0.1rem 0;
-    padding: 0.1rem;
-    text-align: justify;
+  margin: 0.3rem 0;
+  padding: 0.3rem;
+  text-align: justify;
 }
 
-/* Footer Styles */
+/* =========================
+   Footer
+========================= */
 footer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-    font-size: 1rem;
-    padding: 1rem;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #212121;
 }
 
 footer p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 footer p#last {
-    font-style: italic;
+  font-style: italic;
 }
 
-/* Styling the copyright */
 footer p#currentyear {
-    font-weight: bold;
-    color: #2196F3;
+  font-weight: bold;
+  color: #2196F3;
 }
 
-
-
+/* =========================
+   Responsive Design
+========================= */
 @media (min-width: 768px) {
-    nav ul {
-        display: flex;
-        justify-content: space-around;
-    }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
 
-    nav ul li{
-        flex: 1 1 100%;
-    }
+  nav ul li {
+    flex: 1 1 auto;
+  }
 
-    .hamburger {
-        display: none; /* Hide hamburger */
-    }
+  .hamburger {
+    display: none; /* Hide hamburger on desktop */
+  }
 
-    .nav-menu {
-        position: static;
-        flex-direction: row;
-        justify-content: flex-end;
-        background: none;
-        height: auto;
-        width: auto;
-        padding: 0;
-        gap: 1rem;
-    }
+  .nav-menu {
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: none;
+    height: auto;
+    width: auto;
+    padding: 0;
+    gap: 1rem;
+  }
 
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 1rem;
+  main {
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
 
-    }
+  main h1 {
+    grid-column: 1 / 3;
+  }
 
-    main h1 {
-        grid-column:  1 / 3;
-        /* text-align: center;  */
-    }
+  .card-items {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    direction: rtl;
+  }
 
-    .card-items {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        align-items: start;
-        direction: rtl;
-        padding: 0.5rem;
-        gap: 0.5rem;
-    }
-    .card-items-opposite {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        align-items: start;
-        direction: ltr;
-        padding: 0.5rem;
-        gap: 0.5rem;
-    }
-    .card img {
-        width: 100%;
-        grid-column: 1 / 2;
-        align-self: start;
-        display: block;
-    }
+  .card-items-opposite {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    direction: ltr;
+  }
 
-    .card p {
-        grid-column: 2 / 3; 
-        text-align: justify; 
-    }
-    
-    
+  .card img {
+    grid-column: 1 / 2;
+  }
+
+  .card p {
+    grid-column: 2 / 3;
+  }
 }
