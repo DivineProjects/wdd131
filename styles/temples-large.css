@@ -1,5 +1,5 @@
 
-@media (min-width: 768px) {
+@media (min-width: 680px) {
     header h1 {
         text-align: left;
     }
@@ -19,7 +19,7 @@
     }
 
     .container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     #menu {

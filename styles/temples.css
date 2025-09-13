@@ -108,7 +108,7 @@ nav a:hover {
 }
 
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -120,12 +120,10 @@ main h2 {
 .container {
     display:grid; 
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    grid-gap: 0.5rem;
+    grid-gap: 1rem;
     place-items: center;
     margin: 0 1rem;
 }
-
-
 .container img {
     width: 100%;
     height: auto;
@@ -133,9 +131,9 @@ main h2 {
     margin: 0 3em 0.5em 0; 
     float:left; 
 }
-
 .container img:hover {
     box-shadow: 0 0 20px #333;
+    transform: scale(1.05);
 }
 
 figcaption {
@@ -145,8 +143,6 @@ figcaption {
     margin-bottom: 1rem;
     font-size: small;
 }
-
-
 
 /* Footer Styles */
 footer {
@@ -167,7 +163,6 @@ footer p {
 footer p#last {
     font-style: italic;
 }
-
 
 footer p#currentyear {
     font-weight: bold;
