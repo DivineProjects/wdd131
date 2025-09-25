@@ -108,7 +108,7 @@ nav a:hover {
 }
 
 main {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
 }
 
@@ -132,7 +132,7 @@ main h2 {
     float:left; 
 }
 .container img:hover {
-    box-shadow: 0 0 20px #333;
+    box-shadow: 0 0 10px #333;
     transform: scale(1.05);
 }
 
