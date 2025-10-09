@@ -84,6 +84,9 @@ textarea {
 
 .rating-container {
     display: flex;
+    /* Reverse the visual order to 1-5 */
+    flex-direction: row-reverse;
+    justify-content: flex-end; /* Aligns stars to the left */
     gap: 10px;
     flex-wrap: wrap;
 }
@@ -99,6 +102,10 @@ textarea {
     transition: color 0.2s;
 }
 
+/* When a radio is checked, color all preceding labels (which are visually the stars up to that point) */
+.rating-container input[type="radio"]:checked ~ label {
+    color: var(--accent-color);
+} 
 .rating-container input[type="radio"]:checked ~ label,
 .rating-container input[type="radio"]:hover ~ label {
     color: var(--accent-color);
@@ -107,6 +114,7 @@ textarea {
 .rating-container label:hover {
     color: var(--accent-color);
 }
+
 
 .checkbox-group {
     display: flex;
@@ -151,6 +159,8 @@ footer {
     color: white;
     border-radius: 5px;
 }
+
+
 
 @media (max-width: 600px) {
     body {
