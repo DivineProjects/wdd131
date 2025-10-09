@@ -162,7 +162,6 @@ function initHomePage() {
     newsletterForm.addEventListener('submit', function(e) {
       e.preventDefault();
       const email = document.getElementById('email').value;
-      
       // Save to localStorage
       const subscriptions = JSON.parse(localStorage.getItem('newsletterSubscriptions')) || [];
       subscriptions.push({

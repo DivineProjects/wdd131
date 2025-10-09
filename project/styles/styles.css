@@ -61,16 +61,21 @@ nav ul {
 
 nav a {
   color: var(--light);
+  margin: 0 0.2rem;
   padding: 0.5rem 1rem;
   display: block;
   transition: background-color 0.3s;
 }
 
-nav a:hover, nav a.active {
-  background-color: rgba(255,255,255,0.2);
+nav a.active {
+  background-color: rgba(255,255,255,0.1);
   border-radius: 4px;
 }
 
+nav a:hover {
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 4px;
+}
 .menu-toggle {
   display: none;
   background: none;
@@ -171,6 +176,7 @@ button {
   background-color: var(--secondary);
   color: var(--light);
   border: none;
+  margin: 0.5rem 0;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
@@ -228,6 +234,10 @@ footer a {
   
   nav ul {
     flex-direction: column;
+  }
+
+  nav a {
+    margin: 0.2rem 0;
   }
   
   .parks-grid, .benefits-grid, .tips-grid {
