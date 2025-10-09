@@ -3,78 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Divine Jigu">
-    <meta name="description" content="A dynamic web page about Zimbabwe: country data, weather, tourism, and more. Developed using HTML, CSS, and JavaScript.">
+    <meta name="description" content="WDD 131 Dynamic Web Fundamentals assignment, to design and develop a web page about a country or place. Learn to apply HTML, CSS, and JavaScript for a responsive, dynamic page. Visit, travel, tourism, Zimbabwe. A country where I live.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visit Zimbabwe</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
     <script defer src="./scripts/place.js"></script>
     <script defer src="./scripts/getdates.js"></script>
 </head>
 <body>
     <header>
-        <h1>Visit Zimbabwe</h1> 
+        <h1>Live in Zimbabwe</h1>
     </header>
     <main>
         <div class="card-container">
-            <div class="hero">
-                <picture>
-                    <source srcset="images/rinho.webp" media="(min-width: 640px)"> 
-                    <img src="images/vicfalls.webp" alt="Victoria Falls waterfall and mist" width="960" height="540" loading="lazy">
-                  </picture>
-            </div>
-            
+        <div class="hero">
+            <picture>
+                <source srcset="images/rinho.webp" media="(min-width: 640px)">
+                <img src="images/vicfalls.webp" alt="victoria Falls, Zimbabwe" width="320" height="640" loading="lazy">
+              </picture>
+        </div>
+        <!-- Card Section -->
+        <!-- <div class="card-container"> -->
             <section class="card" id="card-data">
                 <div class="card-title">
-                    <h2>Country Data</h2> </div>
+                    <h2>Data</h2>
+                </div>
                 <div class="card-items">
-                    <dl>
-                        <dt class="data-label">Area:</dt>
-                        <dd>386,850 sq km</dd>
-                        
-                        <dt class="data-label">Population:</dt>
-                        <dd>16.34 million</dd>
-                        
-                        <dt class="data-label">Capital:</dt>
-                        <dd>Harare</dd>
-                        
-                        <dt class="data-label">Languages:</dt>
-                        <dd>Shona, Ndebele, English</dd>
-                        
-                        <dt class="data-label">Currency:</dt>
-                        <dd>Zimbabwe Gold (ZiG)</dd> <dt class="data-label">Time Zone:</dt>
-                        <dd>GMT+2</dd>
-                        
-                        <dt class="data-label">Calling Code:</dt>
-                        <dd>+263</dd>
-                        
-                        <dt class="data-label">Internet TLD:</dt>
-                        <dd>.zw</dd>
-                    </dl>
+            
+                    <p><span class="data-label">Area:</span>386,850 sq km</p>
+                    <p><span class="data-label">Population:</span>16.34 million</p>
+                    <p><span class="data-label">Capital:</span>Harare</p>
+                    <p><span class="data-label">Languages:</span>Shona, Ndebele, English</p>
+                    <p><span class="data-label">Currency:</span>Zimbabwe Gold (Zig)</p>
+                    <p><span class="data-label">Time Zone:</span> GMT+2</p>
+                    <p><span class="data-label">Calling Code:</span>+263</p>
+                    <p><span class="data-label">Internet TLD:</span>.zw</p>
                 </div>
             </section>
-            
             <section class="card" id="card-w">
                 <div class="card-title">
                     <h2>Weather</h2>
                     <span class="weather-icon-sm">
-                        <img src="images/weather_day_sand_sandstorm_sun_icon.svg" alt="Sunny and dusty weather icon" width="100" height="50" loading="lazy">
+                        <img src="images/weather_day_sand_sandstorm_sun_icon.svg" alt="Weather" width="100" height="50" loading="lazy">
                     </span>
-                    <div class="weather-icon-lg" role="img" aria-label="Partly cloudy weather icon">🌥️</div> 
+                    <div class="weather-icon-lg">🌥️</div>
+                    <!-- SVG icon for small screens -->
+                    
                 </div>
 
                 <div class="card-weather">
-                    </div>
+                </div>
+                    
             </section>
         </div>
     </main>
 
     <footer>
-        <p>&copy; <time id="currentyear"></time> 💖 Divine Jigu💖 </p>
+        <p>&copy; <span id="currentyear"></span> 💖 Divine Jigu💖 </p>
         <p>📍 Bulawayo, Zimbabwe</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
+        <p id="lastModified"></p>
     </footer>
     
 </body>
